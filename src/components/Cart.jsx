@@ -1,15 +1,22 @@
 import React from 'react'
 
 const Cart = ({cart}) => {
+
+  const totals=cart.reduce((sum,x)=>sum+x.price,0)
+  const total=totals.toFixed(2)
+
   return (
     <div>
       <h2>Shopping Cart</h2>
-      <ul>
-        {cart.map((item, index) => (
-          <li key={index}>{item.name} is in your cart.</li>
-        ))}
-        {/* TODO: Include items here in li tags with text 'ITEM.NAME is in your cart.' */}
-      </ul>
+      <div id='cart'>
+        <div>Product ............................... Price</div>
+        <ol>
+          {cart.map((item, index) => (
+            <li key={index}>{item.name} ................... @${item.price.toFixed(2)}</li>
+          ))}
+        </ol>    
+      <div>Total .............................. ${total}</div>    
+      </div>
     </div>
   )
 }

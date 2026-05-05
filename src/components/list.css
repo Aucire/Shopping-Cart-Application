@@ -1,0 +1,12 @@
+#list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    row-gap: 30px;
+}
+#h2{
+    color: orangered;
+    font-size: 60px;
+    font-weight: 900;
+    font-family: var(--title);
+}
