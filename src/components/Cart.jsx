@@ -12,7 +12,10 @@ const Cart = ({cart}) => {
         <div>Product ............................... Price</div>
         <ol>
           {cart.map((item, index) => (
-            <li key={index}>{item.name} ................... @${item.price.toFixed(2)}</li>
+            <>
+              <li key={index}>{item.name} is in your cart</li>
+              <p>{item.name} ................... @${item.price.toFixed(2)}</p>            
+            </>
           ))}
         </ol>    
       <div>Total .............................. ${total}</div>    
